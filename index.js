@@ -25,15 +25,15 @@ async function resizeImage(imageBuffer, option, outputWidth = 1920) {
         .resize(outputWidth, outputHeight, {
             withoutEnlargement:true,
             fit: "cover",
-            tint: "({ r: 220, g: 250, b: 50 })",
+            // tint: "({ r: 220, g: 250, b: 50 })",
            
         })
-        .modulate({
-            saturation: 1.5, // Increase saturation by 50%
-            brightness: 1.1, // Increase brightness slightly
-            hue: 10 // Slight hue shift (optional for more color effect)
-        })
-        .normalize() // Normalize the image to boost the vibrancy
+        // .modulate({
+        //     saturation: 1.5, // Increase saturation by 50%
+        //     brightness: 1.1, // Increase brightness slightly
+        //     hue: 10 // Slight hue shift (optional for more color effect)
+        // })
+        // .normalize() // Normalize the image to boost the vibrancy
         .toBuffer();
 
     case 'top':
@@ -41,15 +41,15 @@ async function resizeImage(imageBuffer, option, outputWidth = 1920) {
       return image
         .resize(outputWidth, outputHeight, {
           fit: sharp.fit.cover,
-          tint: "({ r: 220, g: 250, b: 50 })",
+          // tint: "({ r: 220, g: 250, b: 50 })",
           position: "top", // Object-position: top
         })
-        .modulate({
-            saturation: 1.5, // Increase saturation by 50%
-            brightness: 1.1, // Increase brightness slightly
-            hue: 10 // Slight hue shift (optional for more color effect)
-        })
-        .normalize() // Normalize the image to boost the vibrancy
+        // .modulate({
+        //     saturation: 1.5, // Increase saturation by 50%
+        //     brightness: 1.1, // Increase brightness slightly
+        //     hue: 10 // Slight hue shift (optional for more color effect)
+        // })
+        // .normalize() // Normalize the image to boost the vibrancy
         .toBuffer();
 
     case 'bottom':
@@ -58,14 +58,14 @@ async function resizeImage(imageBuffer, option, outputWidth = 1920) {
         .resize(outputWidth, outputHeight, {
           fit: sharp.fit.cover,
           position: "bottom", // Object-position: bottom
-          tint: "({ r: 220, g: 250, b: 50 })",
+          // tint: "({ r: 220, g: 250, b: 50 })",
         })
-        .modulate({
-            saturation: 1.5, // Increase saturation by 50%
-            brightness: 1.1, // Increase brightness slightly
-            hue: 10 // Slight hue shift (optional for more color effect)
-        })
-        .normalize() // Normalize the image to boost the vibrancy
+        // .modulate({
+        //     saturation: 1.5, // Increase saturation by 50%
+        //     brightness: 1.1, // Increase brightness slightly
+        //     hue: 10 // Slight hue shift (optional for more color effect)
+        // })
+        // .normalize() // Normalize the image to boost the vibrancy
         .toBuffer();
 
     case 'fit':
@@ -75,14 +75,14 @@ async function resizeImage(imageBuffer, option, outputWidth = 1920) {
         .resize(outputWidth, outputHeight, {
           fit: sharp.fit.inside,
           position: sharp.strategy.entropy, // Maintain content within bounds
-          tint: "({ r: 220, g: 250, b: 50 })",
+          // tint: "({ r: 220, g: 250, b: 50 })",
         })
-        .modulate({
-            saturation: 1.5, // Increase saturation by 50%
-            brightness: 1.1, // Increase brightness slightly
-            hue: 10 // Slight hue shift (optional for more color effect)
-        })
-        .normalize() // Normalize the image to boost the vibrancy
+        // .modulate({
+        //     saturation: 1.5, // Increase saturation by 50%
+        //     brightness: 1.1, // Increase brightness slightly
+        //     hue: 10 // Slight hue shift (optional for more color effect)
+        // })
+        // .normalize() // Normalize the image to boost the vibrancy
         .toBuffer();
   }
 }
